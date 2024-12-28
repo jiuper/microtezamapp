@@ -1,0 +1,143 @@
+.textarea {
+    position: relative;
+    display: block;
+    width: fit-content;
+
+    @include touch-hover(&) {
+        &:not(:focus-visible) {
+            .label {
+                &::before {
+                    background: $color-lightness;
+                }
+            }
+        }
+    }
+
+    &:focus-within {
+        .label {
+            top: -11px;
+            @include text-input;
+            transform: translateY(-0%);
+            color: #FF7648;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 48%;
+                left: 13px;
+                right: 2px;
+                height: 2px;
+                transform: translateY(-50%);
+                background-color: #fff;
+                z-index: -1;
+            }
+        }
+    }
+
+    &.with-value {
+        .label {
+            top: -11px;
+            @include text-input;
+            transform: translateY(-0%);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 48%;
+                left: 13px;
+                right: 2px;
+                height: 2px;
+                transform: translateY(-50%);
+                background-color: #fff;
+                z-index: -1;
+            }
+        }
+    }
+
+    &.disabled {
+        .label {
+            top: 0px;
+            padding-top: 4px;
+            color: $color-dark-light;
+            @include text-input();
+
+            &::before {
+                background: $color-light !important;
+            }
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+}
+
+.textarea-field {
+    padding: 18px 12px 16px 12px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d1d5db;
+    transition: $transition-fast;
+    background: transparent;
+    caret-color: #A2ACB0;
+    box-shadow: none;
+    resize: none;
+    display: block;
+    border-radius: 14px;
+
+    &[data-pc-name="inputtextarea"]:focus{
+        border: 1px solid #FF7648;
+    }
+
+    @include text-Body1;
+
+
+    &:disabled {
+        border-color: $color-dark-lighter;
+        color: $color-dark-light;
+        opacity: 1;
+
+        @include touch-hover(&) {
+            background: transparent;
+            border-color: $color-dark-lighter;
+        }
+    }
+
+    &.error {
+        border-color: $color-red-60;
+
+        @include touch-hover(&) {
+            &:not(:focus) {
+                background: $color-lightness;
+                border-color: rgba($color-red-60, 1);
+            }
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+}
+
+.label {
+    position: absolute;
+    top: 6px;
+    padding-left: 12px;
+    transition: $transition-fast;
+    color: #A2ACB0;
+    pointer-events: none;
+
+    &::before {
+        transition: $transition-fast;
+    }
+}
+
+.message {
+    position: absolute;
+    top: 124px;
+    left: 0;
+    color: $color-red-60;
+    white-space: nowrap;
+
+    @include text-Body3;
+}

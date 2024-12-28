@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7ba358d-bea6-4ce9-949f-e51e8738dd21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/ClientView/components/CardGym/CardGym.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/ClientView/components/CardGym/CardGym.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/ClientView/components/CardGym/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/ClientView/components/CardStaff/CardStaff.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/ClientView/components/CardStaff/CardStaff.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/ClientView/components/CardStaff/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/CompanyView.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/CompanyView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/components/CardGym/CardGym.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/components/CardGym/CardGym.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/components/CardGym/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/components/CardStaff/CardStaff.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/components/CardStaff/CardStaff.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/components/CardStaff/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/src/view/IndexPage/components/CompanyView/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/bogokoapp/.env" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/bogokoapp/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/bogokoapp/src/_Modals/ModalDetailedService/ModalDetailedService.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/bogokoapp/src/_Modals/ModalDetailedService/ModalDetailedService.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/bogokoapp/src/components/DisplayData/DisplayData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/bogokoapp/src/components/DisplayData/DisplayData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/bogokoapp/src/components/RGB/RGB.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/bogokoapp/src/components/RGB/RGB.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/bogokoapp/src/shared/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/bogokoapp/src/shared/api/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/bogokoapp/src/view/SettingPage/components/UploadImage/UploadImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/bogokoapp/src/view/SettingPage/components/UploadImage/UploadImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/apps/fitnessapp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/apps/fitnessapp/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2qQUwydUv9o9ieUTp7cUzTyBInp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/microtezamapp",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\microtezamapp\packages\apps" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7ba358d-bea6-4ce9-949f-e51e8738dd21" name="Changes" comment="" />
+      <created>1734594535141</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734594535141</updated>
+      <workItem from="1734594536244" duration="99000" />
+      <workItem from="1734705874372" duration="7000" />
+      <workItem from="1734766510852" duration="8000" />
+      <workItem from="1734781615319" duration="28000" />
+      <workItem from="1734875847421" duration="11000" />
+      <workItem from="1735386599464" duration="207000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

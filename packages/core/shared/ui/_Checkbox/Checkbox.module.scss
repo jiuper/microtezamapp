@@ -1,0 +1,53 @@
+.ui-checkbox {
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    cursor: pointer;
+
+    @include touch-hover(&) {
+        .checkbox {
+            & [data-pc-section="box"] {
+                box-shadow: 0px 0px 3px 2px $color-purple-light;
+            }
+        }
+    }
+}
+
+.checkbox {
+    box-shadow: none;
+    & [data-pc-section="box"] {
+        border-color: $color-purple;
+        transition: $transition-fast;
+        width: 20px;
+        height: 20px;
+    }
+
+    & [data-p-highlight="true"] {
+        background-color: $color-purple;
+    }
+
+    svg {
+        @include svg-color($color-light);
+    }
+}
+
+.label {
+    @include text-Body1();
+    color: #1c1b1f;
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+
+.message {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    white-space: nowrap;
+    color: $color-red-60;
+
+    @include text-Body3;
+}

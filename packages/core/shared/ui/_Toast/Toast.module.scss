@@ -1,0 +1,72 @@
+.toast {
+    max-width: 480px;
+    width: 100%;
+
+    & [data-pc-section="root"] {
+        border: none;
+        border-radius: 24px;
+        box-shadow: 0px 10px 24px 0px #7b68ee52;
+        background: transparent;
+    }
+
+    & [data-pc-section="content"] {
+        justify-content: space-between;
+        padding: 12px 16px;
+        background: $color-lightness;
+        border-radius: 24px;
+        color: $color-dark;
+    }
+
+    & [data-pc-section="icon"] {
+        display: none;
+    }
+
+    & [data-pc-section="text"] {
+        margin: 0;
+    }
+
+    & [data-pc-section="closebutton"] {
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    & [data-pc-section="buttonicon"] {
+        @include svg-color($color-dark);
+    }
+
+    & [data-pc-section="detail"] {
+        color: $color-dark;
+        @include text-Body2;
+    }
+
+    & [data-pc-section="summary"] {
+        color: $color-dark;
+        @include text-Subtitle2;
+    }
+
+    &.isMobile {
+        right: 0 !important;
+        top: 4px !important;
+
+        & [data-pc-section="root"] {
+            border-radius: 0px;
+        }
+
+        & [data-pc-section="content"] {
+            border-radius: 0px;
+        }
+    }
+
+    :global {
+        .p-toast-message-error {
+            & [data-pc-section="content"] {
+                background: #ffdbdb;
+            }
+
+            & [data-pc-section="summary"] {
+                color: $color-red-light;
+            }
+        }
+    }
+}

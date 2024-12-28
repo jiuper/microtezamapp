@@ -1,0 +1,58 @@
+.wrapper{
+  padding: 18px;
+}
+.header{
+  @include flex-column();
+  gap: 8px;
+  padding-bottom: 18px;
+
+  .date{
+    @include flex-column();
+    gap: 8px;
+    span:last-child{
+      display: none;
+    }
+  }
+
+  .time{
+    @include flex-column();
+    gap: 8px;
+    @include text-Subtitle1();
+    font-weight: 400;
+    color: $color-silver-60;
+  }
+}
+.main{
+  width: 100%;
+  background: $color-light;
+  border-radius: 44px;
+  padding: 16px;
+  box-shadow: 0px -1px 12px 0px rgba(255, 118, 72, 0.12);
+  backdrop-filter: blur(20px);
+  margin: 15px 0;
+
+  button{
+    width: 100%;
+    border-radius: 44px;
+  }
+}
+
+.body{
+  @include flex-column();
+  gap: 20px;
+  width: 100%;
+
+  .select{
+    width: 100%;
+  }
+
+  .button{
+    border-radius: 14px;
+    justify-content: center;
+    gap: 8px;
+
+    span{
+      flex: 0 1 auto;
+    }
+  }
+}

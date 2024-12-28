@@ -1,0 +1,64 @@
+.journal{
+  @include flex-column();
+  gap: 12px;
+  width: 100%;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.list{
+  @include flex-center();
+}
+
+.master-wrapper{
+  @include flex-column();
+  gap: 8px;
+  .profile{
+    @include flex-center();
+    flex-direction: column;
+    transition: $transition-fast;
+    .image{
+      border-radius: 60px;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid transparent;
+
+      &.active{
+        border: 2px solid $color-orange-60;
+      }
+    }
+    .name{
+      @include text-Body4();
+      color: $color-dark;
+
+      &.active{
+        color: $color-orange-60;
+      }
+    }
+  }
+  .title{
+    @include text-Subtitle3();
+    color: $color-shading-60;
+    text-align: center;
+  }
+}
+
+.avatar{
+  width: 50px;
+}
+.select{
+  flex: 1 0 20%;
+  border: none !important;
+
+  &>div{
+    padding: 0;
+  }
+}
+.carousel-master{
+  [data-pc-section="indicators"]{
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+.input-search {
+    position: relative;
+    display: block;
+    transform: $transition-fast;
+    box-shadow: none;
+
+    @include touch-hover(&) {
+        .icon {
+            color: $color-purple;
+            height: 32px;
+            border-left: 1px solid rgba($color-purple, 1);
+
+            &::after {
+                background: rgba($color-purple, 0);
+            }
+        }
+    }
+
+    &:focus-within {
+        .icon {
+            color: $color-purple;
+            height: 32px;
+            border-left: 1px solid rgba($color-purple, 1);
+
+            &::after {
+                background: rgba($color-purple, 0);
+            }
+        }
+    }
+}
+
+.input-text {
+    padding: 13px 70px 13px 12px;
+    border: 1.5px solid $color-lightness;
+    background: $color-lightness;
+    box-shadow: none;
+    transition: $transition-default;
+    width: 100%;
+
+    @include text-Body1;
+
+    &:focus {
+        background: transparent;
+        border-color: rgba(120, 120, 128, 0.12);
+    }
+
+    &:disabled {
+        background: transparent;
+
+        @include touch-hover(&) {
+            background: transparent;
+            border-color: $color-lightness;
+        }
+    }
+}
+
+.icon {
+    position: absolute;
+    width: 48px;
+    height: 32px;
+    border-radius: 0px 6px 6px 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-light;
+    font-size: 26px;
+    transition: $transition-default;
+    color: $color-light;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 49px;
+        height: 47.5px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0px 6px 6px 0;
+        transform: translate(-2px, -8px);
+        z-index: -1;
+        transition: $transition-default;
+        transition-delay: 0.15s;
+    }
+
+    @include flex-center;
+
+    &.disabled {
+        color: $color-purple;
+
+        &::after {
+            background: #f2f2f2 !important;
+        }
+    }
+}

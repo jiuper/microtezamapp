@@ -1,0 +1,80 @@
+.input-phone {
+    position: relative;
+    width: fit-content;
+
+    &.isFullWidth {
+        width: 100%;
+    }
+}
+
+.country-option {
+    @include flex-center;
+    gap: 8px;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 1;
+    border: none;
+    border-radius: 6px 0 0 0 !important;
+    width: 68px;
+    @include flex-center;
+    height: 47.5px;
+    border-right: 1px solid $color-purple;
+
+    @include touch-hover(&) {
+        background: transparent;
+    }
+
+
+
+    :global {
+        .p-dropdown-trigger {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+        }
+
+        .p-dropdown-label {
+            @include flex-center;
+        }
+    }
+}
+
+.flag {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.input-number {
+    padding: 13px 12px 13px 74px !important;
+
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; // Yeah, yeah everybody write about it
+    }
+
+    &[type="number"],
+    &[type="number"]:hover,
+    &[type="number"]:focus {
+        appearance: none;
+        -moz-appearance: textfield;
+    }
+
+    &.isOpenDropdown {
+        border-radius: 6px 6px 0 0 !important;
+    }
+
+    &.withLabel {
+        padding: 20px 12px 6px 74px !important;
+    }
+}
+
+.label {
+    left: 64px;
+}
+
+.panel {
+    width: var(--max-input-phone-dropdown-width);
+}

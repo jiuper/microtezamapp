@@ -1,0 +1,46 @@
+.modal-booking-service{
+  @include flex-column();
+  padding: 16px;
+  gap: 16px;
+
+  .description-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 28px;
+    border: 1px solid $color-orange-60;
+    background: rgba(255, 255, 255, 0.50);
+    padding: 10px 16px;
+    .count-service{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span{
+        color: $color-orange-60;
+        @include text-Headline1();
+        text-transform: uppercase;
+      }
+      .icon{
+        fill: $color-orange-60;
+      }
+    }
+    .time-price{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span{
+        color: $color-orange-60;
+        @include text-Body1();
+      }
+    }
+  }
+  .button{
+    background: $color-orange-60;
+    border-radius: 28px;
+  }
+  .text{
+    @include text-Body4();
+    color: $color-dark;
+    text-align: center;
+  }
+}

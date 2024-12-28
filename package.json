@@ -1,0 +1,45 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": {
+  "packages": [
+    "src/apps/*",
+    "src/core"
+  ]
+},
+  "dependencies": {
+    "@telegram-apps/react-router-integration": "^1.0.0",
+    "@telegram-apps/sdk-react": "^1.0.0",
+    "@telegram-apps/telegram-ui": "^2.1.5",
+    "@tonconnect/ui-react": "^2.0.5",
+    "eruda": "^3.0.1",
+    "luxon": "^3.5.0",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/react-redux": "^7.1.33",
+    "@reduxjs/toolkit": "^2.2.7",
+    "@tanstack/react-query": "^5.51.23",
+    "react-day-picker": "^9.0.8",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "motion": "^11.11.17",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.8.3",
+    "axios": "^1.6.7",
+    "classnames": "^2.5.1",
+    "countries-phone-masks": "^1.1.0",
+    "date-fns": "^3.6.0",
+    "dayjs": "^1.11.13",
+    "swiper": "^11.1.15",
+    "yup": "^1.4.0",
+    "formik": "^2.4.6",
+    "libphonenumber-js": "^1.11.7",
+    "lodash.debounce": "^4.0.8",
+    "react-swipeable": "^7.0.1"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.9",
+    "@types/luxon": "^3.4.2",
+    "sass": "^1.79.4",
+    "url-loader": "^4.1.1"
+  }
+}

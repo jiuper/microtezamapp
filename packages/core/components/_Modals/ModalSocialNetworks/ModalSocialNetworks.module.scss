@@ -1,0 +1,12 @@
+.modal-social-networks{
+  padding: 16px 8px;
+  @include flex-column();
+  gap: 8px;
+}
+.title{
+ @include text-Title();
+}
+.networks-list{
+  @include flex-column();
+  gap: 8px;
+}

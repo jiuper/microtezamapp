@@ -1,0 +1,81 @@
+.ui-input-switch {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    width: fit-content;
+    @include touch-hover(&) {
+        :not([data-p-disabled="true"]) {
+            [data-pc-section="slider"] {
+                &::before {
+                    box-shadow: 0px 0px 1px 8px #0000000d;
+                }
+            }
+        }
+    }
+}
+
+.ui-input-switch {
+    & [data-pc-section="root"] {
+        width: 52px;
+        height: 32px;
+    }
+
+    & [aria-checked="true"] {
+        & [data-pc-section="slider"] {
+            background: #007AFF;
+            &::before {
+                background: $color-light;
+            }
+        }
+    }
+
+    & [aria-checked="false"] {
+        & [data-pc-section="slider"] {
+            background: #F4F4F7;
+            border: 3px solid #707579;
+            &::before {
+                background: $color-light;
+                content: url("@/shared/assets/icon/cancel_16.svg");
+                background: #707579;
+                margin-top: -8px;
+
+            }
+        }
+    }
+
+    & [data-pc-section="slider"] {
+        border: none;
+        background: transparent;
+        &::before {
+            content: url("@/shared/assets/icon/check_16.svg");
+            transition: $transition-fast;
+            @include flex-center();
+            width: 24px;
+            height: 24px;
+            margin-top: -7px;
+            left: 2px;
+            background: $color-dark-light;
+            top: 35%;
+        }
+    }
+}
+
+.label {
+    @include text-Body1();
+    color: #1c1b1f;
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+
+.message {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    white-space: nowrap;
+    color: $color-red-60;
+
+    @include text-Body3;
+}

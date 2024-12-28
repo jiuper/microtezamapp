@@ -1,0 +1,33 @@
+.button-arrow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+
+  &.empty{
+    border-radius: 28px;
+    background: rgba(0, 0, 0, 0.04);
+    border: none;
+  }
+  &.white{
+    border: none;
+  }
+}
+.wrapper-button{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  span{
+    @include text-Subtitle2();
+    color: $color-dark;
+  }
+}
+.button{
+  border-radius: 20px;
+  background: $color-orange-60;
+  @include text-Body1();
+  color: $color-light;
+  border: none;
+}

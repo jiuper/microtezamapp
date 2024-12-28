@@ -1,0 +1,32 @@
+.modal {
+    &[data-pc-name="dialog"] {
+        margin: 0;
+    }
+    [data-pc-section="content"] {
+        padding: 8px 16px 16px 16px;
+        border-radius: 0;
+    }
+    [data-pc-section="header"] {
+        padding: 16px;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
+        [data-pc-section="headertitle"] {
+            @include text-Subtitle3();
+        }
+    }
+
+
+}
+
+.header-btn {
+    &:focus,
+    &:active,
+    &:hover {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+.content {
+    min-height: 50px;
+}

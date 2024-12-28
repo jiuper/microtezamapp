@@ -1,0 +1,44 @@
+.title{
+    @include text-Title();
+}
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+.card{
+  @include flex-column();
+  gap: 8px;
+}
+.header{
+  @include flex-center();
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background: $color-light;
+}
+.body{
+  @include flex-column();
+  gap: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background: $color-light;
+  .file{
+    @include flex-column();
+    gap: 8px;
+  }
+  .comment{
+    @include flex-column();
+    gap: 8px;
+    height: 200px;
+  }
+}
+.footer{
+  @include flex-column();
+  gap: 8px;
+  border-radius: 44px;
+  background: #FFF;
+  box-shadow: 0px -1px 12px 0px rgba(255, 118, 72, 0.12);
+  backdrop-filter: blur(20px);
+  padding: 16px;
+}

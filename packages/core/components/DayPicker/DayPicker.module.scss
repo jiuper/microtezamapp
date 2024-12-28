@@ -1,0 +1,47 @@
+.day-picker{
+  position: relative;
+  flex: 1 0 70%;
+
+  .title{
+    @include text-Subtitle3();
+    color: $color-shading-60;
+    text-transform: capitalize;
+
+  }
+  .day-picker-modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    border-radius: 12px;
+    background: $color-light;
+    box-shadow: 0px 2px 4px 0px rgba(255, 118, 72, 0.12), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    padding: 4px 16px 16px 16px;
+
+    &.open{
+      display: flex;
+    }
+
+    .module{
+      .caption_custom{
+        @include text-Subtitle3();
+        color: $color-shading-60;
+        text-transform: capitalize;
+      }
+
+      .button_custom{
+        fill: $color-orange-60;
+      }
+
+      .day_button_custom{
+        @include text-Subtitle4();
+        color: $color-dark;
+      }
+      .weekday_custom{
+        @include text-Body3();
+        text-transform: uppercase;
+        color: #3C3C434D;
+      }
+    }
+  }
+}

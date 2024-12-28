@@ -1,0 +1,168 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.multi-select {
+    position: relative;
+
+    &.with-value {
+        .label {
+            top: 4px;
+            @include text-Body3;
+            transform: translateY(-0%);
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+}
+
+.multi-select-field {
+    box-shadow: none;
+    border: 1px solid $color-purple;
+    transition: $transition-fast;
+    background: rgba($color-lightness, 0);
+
+    :global {
+        .p-multiselect-label {
+            padding: 13.5px 12px;
+            transition: $transition-fast;
+            color: #4b5563;
+            @include text-Body1;
+        }
+    }
+
+    &.with-label {
+        :global {
+            .p-multiselect-label {
+                padding: 20px 12px 6px 12px;
+            }
+        }
+    }
+
+    @include touch-hover(&) {
+        background: $color-lightness;
+    }
+
+    &.isShowMenu {
+        background: $color-purple;
+        border-radius: 6px 6px 0 0;
+
+        :global {
+            .p-multiselect-label {
+                color: $color-light;
+            }
+        }
+
+        @include touch-hover(&) {
+            background: $color-purple;
+        }
+
+        svg {
+            @include svg-color($color-light, 300ms);
+            transform: rotate(180deg);
+        }
+    }
+
+    &.error {
+        border-color: $color-red-60;
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+
+    svg {
+        transition: $transition-fast;
+    }
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 13px;
+    transition: $transition-fast;
+    color: $color-purple;
+    z-index: 1;
+
+    &.isShowMenu {
+        color: $color-light !important;
+    }
+
+    &.error {
+        color: $color-dark-light;
+    }
+}
+
+.menu {
+    padding: 0;
+    animation: fadeIn 0.3s;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0px 10px 24px 0px #7b68ee52;
+
+    :global {
+        .p-multiselect-items {
+            padding: 2px 0;
+        }
+
+        .p-multiselect-filter {
+            box-shadow: none;
+            border-color: $color-purple;
+        }
+
+        .p-multiselect-item {
+            padding: 5px 12px;
+            @include text-Body2;
+
+            &.p-highlight {
+                color: $color-purple;
+                background: $color-lighter;
+            }
+        }
+
+        .p-multiselect-header {
+            padding: 5px 12px;
+            @include text-Body2;
+        }
+
+        .p-checkbox {
+            box-shadow: none;
+            & [data-pc-section="box"] {
+                border-color: $color-purple;
+                transition: $transition-fast;
+                width: 20px;
+                height: 20px;
+            }
+
+            & [data-p-highlight="true"] {
+                background-color: $color-purple;
+            }
+
+            svg {
+                @include svg-color($color-light);
+            }
+        }
+    }
+}
+
+.message {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    color: $color-red-60;
+    white-space: nowrap;
+
+    @include text-Body3;
+}

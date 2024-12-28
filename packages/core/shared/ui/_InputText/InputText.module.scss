@@ -1,0 +1,288 @@
+.input-text {
+    position: relative;
+    display: block;
+    width: fit-content;
+
+    &:focus-within {
+        .label {
+            top: -11px;
+            @include text-input;
+            transform: translateY(-0%);
+            color: #FF7648;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 48%;
+                left: 13px;
+                right: 2px;
+                height: 2px;
+                transform: translateY(-50%);
+                background-color: #fff;
+                z-index: -1;
+            }
+        }
+
+    }
+
+
+
+    &.with-value {
+        .label {
+            top: -11px;
+            @include text-input;
+            transform: translateY(-0%);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 48%;
+                left: 13px;
+                right: 2px;
+                height: 2px;
+                transform: translateY(-50%);
+                background-color: #fff;
+                z-index: -1;
+            }
+        }
+
+    }
+
+    &.icon-start {
+        .label {
+            left: 26px;
+        }
+    }
+
+    &.disabled {
+        .label {
+            color: $color-dark-light;
+        }
+    }
+
+    &.error {
+        .label {
+            color: $color-red-60;
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+}
+
+.icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+
+    &.icon-start {
+        left: 12px;
+    }
+
+    &.icon-end {
+        right: 12px;
+    }
+
+    &.small {
+        svg {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            @include svg-color($color-purple);
+        }
+
+        i {
+            display: block;
+            font-size: 16px;
+            color: $color-purple;
+        }
+    }
+
+    &.medium {
+        svg {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            @include svg-color($color-purple);
+        }
+
+        i {
+            display: block;
+            font-size: 20px;
+            color: $color-purple;
+        }
+    }
+
+    &.orange {
+        &.disabled {
+            svg {
+                @include svg-color($color-dark-light);
+            }
+
+            i {
+                color: $color-dark-light;
+            }
+        }
+
+        &.error {
+            svg {
+                @include svg-color($color-dark-light);
+            }
+
+            i {
+                color: $color-dark-light;
+            }
+        }
+    }
+
+    &.white {
+        svg {
+            @include svg-color($color-light);
+        }
+
+        i {
+            color: $color-light;
+        }
+    }
+}
+
+.text-field {
+    background: transparent;
+    border-radius: 14px;
+    &[data-pc-name="inputtext"]:focus{
+        border-color: #FF7648;
+    }
+
+    &.small {
+        padding: 13px 12px;
+        @include text-Body1;
+
+
+        &.icon-start {
+            padding-left: 36px;
+        }
+
+        &.icon-end {
+            padding-right: 36px;
+        }
+    }
+
+    &.medium {
+        padding: 19px 24px;
+        @include text-Subtitle1;
+        font-weight: 400;
+
+        &.icon-start {
+            padding-left: 46px;
+        }
+
+        &.icon-end {
+            padding-right: 46px;
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &.white {
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            transition-delay: 9999s;
+            transition-property: $color-light, color;
+        }
+        border: 1px solid $color-light;
+        color: $color-light;
+
+        &.error {
+            border-color: $color-red-light;
+        }
+    }
+
+    &.orange {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: $transition-fast;
+        background: rgba($color-lightness, 0);
+        caret-color: #A2ACB0;
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            transition-delay: 9999s;
+            transition-property: $color-light, color;
+        }
+
+        @include touch-hover(&) {
+            &:not(:focus) {
+                background: $color-lightness;
+            }
+        }
+
+        &.error {
+            border-color: $color-red-60;
+        }
+
+        &:disabled {
+            border-color: $color-dark-lighter;
+            color: $color-dark-light;
+            opacity: 1;
+
+            @include touch-hover(&) {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition-fast;
+
+    &.white {
+        color: $color-light;
+    }
+
+    &.orange {
+        color: #A2ACB0;
+    }
+
+    &.small {
+        padding-left: 12px;
+        color: #A2ACB0;
+        @include text-Body1;
+    }
+
+    &.medium {
+        @include text-Subtitle1;
+        padding-left: 16px;
+        font-weight: 400;
+    }
+}
+
+.message {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    white-space: nowrap;
+    color: $color-red-60;
+
+
+    &.white {
+        color: $color-red-light;
+    }
+
+    @include text-Body3;
+}

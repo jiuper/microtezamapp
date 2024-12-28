@@ -1,0 +1,30 @@
+.select-button {
+    border: none;
+}
+
+.title {
+    margin-bottom: 4px;
+    @include text-Subtitle3;
+}
+
+.select-button {
+    display: flex;
+    flex-wrap: nowrap;
+    & [data-pc-section="button"] {
+        box-shadow: none;
+        border: none;
+        border-radius: 5px;
+        color: $color-purple;
+        border: 1px solid rgba($color-purple, 0);
+        padding: 10px 8px;
+        flex-grow: 1;
+        white-space: nowrap;
+
+        @include text-Body2;
+    }
+
+    & [aria-pressed="true"] {
+        background: #f2f0fd;
+        border-color: rgba($color-purple, 1);
+    }
+}

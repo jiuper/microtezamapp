@@ -1,0 +1,55 @@
+.button-icon {
+  height: fit-content;
+  display: flex;
+  transition: $transition-default;
+  box-shadow: none;
+
+  [data-pc-section="label"]{
+    flex: auto;
+  }
+  @include touch-hover(&) {
+    background: transparent;
+  }
+
+  &.small {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    i {
+      font-size: 16px
+    }
+  }
+
+  &.empty {
+    background: rgba(0, 0, 0, 0.04);
+    svg {
+      @include svg-color(rgba(0, 0, 0, 0.80));
+    }
+
+    span {
+      color: rgba(0, 0, 0, 0.80);
+    }
+  }
+
+  &.orange {
+    background: $color-orange-60;
+    svg {
+      @include svg-color($color-light);
+    }
+
+    span {
+      color: #FFF;
+    }
+  }
+  &.red {
+    svg {
+      @include svg-color($color-red-60);
+    }
+
+    span {
+      color: $color-red-60;
+    }
+  }
+}

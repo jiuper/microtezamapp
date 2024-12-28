@@ -1,0 +1,261 @@
+.input-number {
+    position: relative;
+    display: block;
+    width: fit-content;
+
+    &:focus-within {
+        .label {
+            top: 4px;
+            @include text-Body3;
+            transform: translateY(-0%);
+        }
+    }
+
+    &.with-value {
+        .label {
+            top: 4px;
+            @include text-Body3;
+            transform: translateY(-0%);
+        }
+    }
+
+    &.icon-start {
+        .label {
+            left: 26px;
+        }
+    }
+
+    &.disabled {
+        .label {
+            color: $color-dark-light;
+        }
+    }
+
+    &.error {
+        .label {
+            color: $color-dark-light;
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+
+        & [data-pc-section="root"] {
+            width: 100%;
+        }
+    }
+}
+
+.icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+
+    &.icon-start {
+        left: 12px;
+    }
+
+    &.icon-end {
+        right: 12px;
+    }
+
+    &.small {
+        svg {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            @include svg-color($color-purple);
+        }
+
+        i {
+            display: block;
+            font-size: 16px;
+            color: $color-purple;
+        }
+    }
+
+    &.medium {
+        svg {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            @include svg-color($color-purple);
+        }
+
+        i {
+            display: block;
+            font-size: 20px;
+            color: $color-purple;
+        }
+    }
+
+    &.purple {
+        &.disabled {
+            svg {
+                @include svg-color($color-dark-light);
+            }
+
+            i {
+                color: $color-dark-light;
+            }
+        }
+
+        &.error {
+            svg {
+                @include svg-color($color-dark-light);
+            }
+
+            i {
+                color: $color-dark-light;
+            }
+        }
+    }
+
+    &.white {
+        svg {
+            @include svg-color($color-light);
+        }
+
+        i {
+            color: $color-light;
+        }
+    }
+}
+
+.number-field {
+    background: transparent;
+
+    &.small {
+        padding: 13px 12px;
+        @include text-Body1;
+
+        &.with-label {
+            padding: 20px 12px 6px 12px;
+        }
+
+        &.icon-start {
+            padding-left: 36px;
+        }
+
+        &.icon-end {
+            padding-right: 36px;
+        }
+    }
+
+    &.medium {
+        padding: 19px 24px;
+        @include text-Subtitle1;
+        font-weight: 400;
+
+        &.icon-start {
+            padding-left: 46px;
+        }
+
+        &.icon-end {
+            padding-right: 46px;
+        }
+    }
+
+    &.isFullWidth {
+        width: 100%;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &.white {
+        border: 1px solid $color-light;
+        color: $color-light;
+
+        &.error {
+            border-color: $color-red-light;
+        }
+    }
+
+    &.purple {
+        border: 1px solid $color-purple;
+        transition: $transition-fast;
+        background: rgba($color-lightness, 0);
+        caret-color: #49454f;
+
+        @include touch-hover(&) {
+            &:not(:focus) {
+                background: $color-lightness;
+            }
+        }
+
+        &.error {
+            border-color: $color-red-60;
+        }
+
+        &:disabled {
+            border-color: $color-dark-lighter;
+            color: $color-dark-light;
+            opacity: 1;
+
+            @include touch-hover(&) {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition-fast;
+
+    &.white {
+        color: $color-light;
+    }
+
+    &.purple {
+        color: $color-purple;
+    }
+
+    &.small {
+        padding-left: 12px;
+        @include text-Body1;
+    }
+
+    &.medium {
+        @include text-Subtitle1;
+        padding-left: 16px;
+        font-weight: 400;
+    }
+}
+
+.message {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    white-space: nowrap;
+
+    &.purple {
+        color: $color-red-60;
+    }
+
+    &.white {
+        color: $color-red-light;
+    }
+
+    @include text-Body3;
+}
+
+.calc-button {
+    background: $color-purple;
+    border-color: $color-purple;
+
+    @include touch-hover(&) {
+        background: $color-purple-darkness;
+        border-color: $color-purple-darkness;
+    }
+}

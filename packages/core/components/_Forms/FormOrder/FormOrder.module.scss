@@ -1,0 +1,71 @@
+.form-wrapper{
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #FFF;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+
+.modal-booking-service{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .description-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 28px;
+    border: 1px solid #FF7648;
+    background: rgba(255, 255, 255, 0.50);
+    padding: 10px 16px;
+    .count-service{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span{
+        color: #FF7648;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 83.333% */
+        letter-spacing: -0.23px;
+        text-transform: uppercase;
+      }
+      .icon{
+        fill: #FF7648;
+      }
+    }
+    .time-price{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span{
+        color: #FF7648;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 133.333% */
+        letter-spacing: -0.23px;
+      }
+    }
+  }
+  .button{
+    background: #FF7648;
+    border-radius: 28px;
+  }
+  .text{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 145.455% */
+    letter-spacing: 0.1px;
+    color: #000;
+    text-align: center;
+  }
+}

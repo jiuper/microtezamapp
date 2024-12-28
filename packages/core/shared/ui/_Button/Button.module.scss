@@ -1,0 +1,159 @@
+$solid-shadow: 0px 10px 24px 0px #7B68EE52;
+$solid-shadow-hover: 0px 1px 3px 1px #002EFF26, 0px 1px 2px 0px #002EFF4D;
+$outlined-shadow-hover: 0px 1px 3px 1px #002EFF26, 0px 1px 2px 0px #002EFF4D;
+$outlined-shadow: 0px 10px 24px 0px #7B68EE52;
+$shadow-shadow: 0px 10px 24px 0px #7B68EE52;
+
+.ui-button {
+  height: fit-content;
+  transition: $transition-fast;
+  border-radius: 20px;
+  @include text-Button;
+
+  &.isFullWidth {
+    width: 100%;
+  }
+
+  &.solid {
+    border: 1px solid $color-orange-60;
+    background: $color-orange-60;
+    color: $color-light;
+
+    @include touch-hover(&) {
+      border: 1px solid transparent;
+      background: rgba($color-dark, 0.04);
+      color: rgba($color-dark, 0.80);
+    }
+  
+    &:active {
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      border: 1px solid rgba($color-purple-lighter, 1);
+      background: #FF7648;
+    }
+  
+    &:disabled {
+      background: $color-orange-60;
+      box-shadow: none;
+      opacity: 0.3;
+      color: $color-light;
+    }
+  }
+
+  &.outlined {
+    background: rgba($color-dark, 0.10);
+    backdrop-filter: blur(20px);
+    border: none;
+    color: rgba($color-dark, 0.80);
+    box-shadow: none;
+
+    @include touch-hover(&) {
+      background: rgba($color-dark, 0.10);
+    }
+
+    &:focus-visible {
+      border-color: $color-purple-lighter;
+      color: $color-purple-darkness;
+    }
+
+    &:active {
+      border-color: $color-lighter;
+      color: $color-purple-darkness;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      border-color: $color-purple-lighter;
+      color: $color-purple-lighter;
+    }
+  }
+
+  &.clear {
+    background: transparent;
+    color: $color-purple;
+    border: 1px solid transparent;
+    box-shadow: none;
+
+    @include touch-hover(&) {
+      background: $color-lightness;
+      color: $color-purple-darkness;
+    }
+
+    &:active {
+      background: $color-lightness;
+      color: $color-purple-darkness;
+    }
+
+    &:focus-visible {
+      background: $color-lightness;
+      color: $color-purple-darkness;
+      border-color: $color-purple-lighter;
+    }
+
+    &:disabled {
+      color: $color-purple-lighter;
+    }
+  }
+
+
+  &.text {
+    background: transparent;
+    color: $color-purple;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+
+    @include touch-hover(&) {
+      color: $color-purple-darkness;
+    }
+
+    &:active {
+      color: $color-purple-darkness;
+    }
+
+    &:focus-visible {
+      color: $color-purple-darkness;
+    }
+
+    &:disabled {
+      color: $color-purple-lighter;
+    }
+  }
+
+  &.shadow {
+    background: transparent;
+    color: $color-purple;
+    border-color: transparent;
+    box-shadow: $shadow-shadow;
+
+    @include touch-hover(&) {
+      background: $color-lightness;
+      box-shadow:$outlined-shadow-hover;
+      color: $color-purple-darkness;
+    }
+
+    &:active {
+      background: $color-lightness;
+      color: $color-purple-darkness;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      background: $color-lightness;
+      color: $color-purple-darkness;
+      border: 1px solid $color-purple-lighter;
+    }
+
+    &:disabled {
+      background: $color-purple-lighter;
+      box-shadow: none;
+      color: $color-light;
+    }
+  }
+
+  span {
+    @include text-Button;
+  }
+}

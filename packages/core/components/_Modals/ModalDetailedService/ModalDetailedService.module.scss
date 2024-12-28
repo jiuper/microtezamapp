@@ -1,0 +1,79 @@
+.modal-detailed{
+  [data-pc-section="content"] {
+    padding: 0;
+    border-radius: 24px 24px 0 0;
+  }
+}
+.header{
+  position: relative;
+    .image{
+        width: 100%;
+        height: 315.15px;
+        object-fit: cover;
+        border-radius: 24px 24px 0 0;
+      }
+
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: $color-light;
+    z-index: 2;
+  }
+  .closed-plank{
+    position: absolute;
+    left: 45%;
+    top: 0;
+  }
+}
+.body{
+  @include flex-column();
+  gap: 10px;
+  padding: 20px 20px 40px 20px;
+  .description{
+    @include flex-column();
+    gap: 10px;
+    .title{
+      @include text-Subtitle3();
+      color:$color-shading-60;
+    }
+    .text{
+      @include text-Body2();
+      color: $color-silver-30;
+    }
+  }
+  .info{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 28px;
+    background: #EEF1FA;
+    padding: 20px;
+    .time{
+      @include text-Body1();
+      color: $color-shading-60;
+
+      &.time-active{
+        opacity: 0;
+      }
+    }
+    .price{
+      @include text-Subtitle2();
+      color: $color-shading-60;
+    }
+  }
+  .button{
+    margin-top: 12px;
+    border-radius: 28px;
+    border:  1px solid  rgba(0, 0, 0, 0.05);
+    width: 100%;
+    padding: 15px;
+    background: $color-orange-60;
+    @include text-Subtitle2();
+    color: #1c1b1f;
+    gap: 10px;
+    justify-content: center;
+    [data-pc-section="label"]{
+      flex: inherit;
+    }
+  }
+}

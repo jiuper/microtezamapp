@@ -1,0 +1,107 @@
+.calendar{
+  @include flex-column();
+  gap: 12px;
+  width: 100%;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.days{
+  @include flex-center();
+  width: 100%;
+
+  .day{
+    @include flex-column();
+    @include flex-center();
+    padding: 11px 8px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid transparent;
+    max-width: 40px;
+    width: 100%;
+
+
+    .day-week{
+      @include text-Body3();
+      color: #94A3B8;
+    }
+
+    .day-number{
+      @include text-Subtitle4();
+      font-weight: 600;
+    }
+
+    &.today:before{
+      content: "";
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background: $color-orange-60;
+      border-radius: 50%;
+    }
+
+    &.work{
+      color: $color-dark-70;
+    }
+    &.weekend{
+      color: $color-red-60;
+      .day-week{
+        color: $color-red-60;
+      }
+    }
+
+    &.selectedDay{
+      background: $color-orange-60;
+      border-radius: 12px;
+      border: 1px solid $color-orange-60;
+
+      &.work{
+        color: $color-light;
+        .day-week{
+          color: $color-light;
+        }
+        &.today:before {
+          background: $color-light;
+        }
+      }
+
+      &.weekend{
+        color: #5C1C1D;
+        .day-week{
+          color: #5C1C1D;
+        }
+      }
+
+    }
+
+    &.notWork{
+      color: #94A3B8;
+
+      &.weekend{
+        color: $color-red-60;
+        .day-week{
+          color: $color-red-60;
+        }
+      }
+
+      &.selectedDay{
+        background: transparent;
+      }
+
+      &.today:before {
+        background: $color-orange-60;
+      }
+    }
+  }
+}
+
+
+
+
